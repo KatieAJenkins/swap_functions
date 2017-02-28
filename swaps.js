@@ -3,7 +3,7 @@
 
 //SWAP FUNCTION
   //Inputs: array, 2 indices of numbers to swap
-  //Outputs: new array
+  //Outputs: array (existing)
 
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -22,7 +22,7 @@ function swap (array, index_A, index_B) {
 }
 
 swap(array, 5 , 7);
-console.log(array);
+// console.log(array);
 
 // Implement a reverse function for arrays using your swap function.
 
@@ -30,7 +30,29 @@ console.log(array);
 
 //REVERSE FUNCTION
   //Inputs: array [1, 2, 3, 4]
-  //Outputs: array [4, 3, 2, 1]
-  //pseudo-code
-  //find the length of the array
-  //move each value one to the left per the length of the array
+  //Outputs: array [4, 3, 2, 1] (existing)
+
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function reverse(array){
+  //starting value in array
+  var i = 0;
+  //find last value in array (last index = array.length -1)
+  var j = array.length - 1;
+
+  while (i < j){
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+
+    //count up through i
+    i++;
+    // console.log('i', array[i]);
+    //count down through j
+    j--;
+    // console.log(array[j]);
+  }
+}
+
+reverse(array);
+// console.log(array);
